@@ -23,12 +23,12 @@ const columns = [
     },
     {
         name: 'Client',
-        selector: row => row.client?.version,
+        selector: 'client',
         sortable: true
     },
     {
         name: 'Sensor',
-        selector: 'sensor.ip',
+        selector: 'sensor',
         sortable: true
     }
 ];
