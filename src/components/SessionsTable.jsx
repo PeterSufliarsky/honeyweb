@@ -35,38 +35,23 @@ const columns = [
 ];
 
 class SessionsTable extends Component {
-    state = {
-        progressPending: true,
-        sessions: []
-    }
 
-    componentDidMount() {
-        fetch(process.env.REACT_APP_API_HOST + '/sessions?date=today')
-        .then(res => res.json())
-        .then((data) => {
-            this.setState(
-                {
-                    progressPending: false,
-                    sessions: data
-                }
-            )
-        })
-        .catch(console.log)
-    }
-    
     render() {
         return (
             <div className="sessions-table">
                 <DataTable
-                    title="Sessions"
                     columns={columns}
-                    data={this.state.sessions}
+                    data={this.props.sessions}
+                    defaultSortField={this.props.defaultSortField}
+                    defaultSortAsc={this.props.defaultSortAsc}
                     highlightOnHover
                     pagination
                     expandableRows
                     expandableRowsComponent={<SessionDetails />}
+                    expandOnRowClicked
+                    noHeader
                     persistTableHead
-                    progressPending={this.state.progressPending}
+                    progressPending={this.props.progressPending}
                 />
             </div>
         )

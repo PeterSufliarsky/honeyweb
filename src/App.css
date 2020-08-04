@@ -32,6 +32,19 @@
   padding-left: 10px;
 }
 
+.dashboard-filters {
+  margin: 5px;
+  display: flex;
+}
+
+.filter-element {
+  margin-right: 10px;
+}
+
+.filter-element span {
+  margin-right: 5px;
+}
+
 .sessions-table {
   margin: 5px;
 }
