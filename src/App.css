@@ -37,12 +37,32 @@
   display: flex;
 }
 
-.filter-element {
-  margin-right: 10px;
+.dashboard-widget {
+  box-shadow: 0.055rem 0.055rem 1.11rem rgba(20, 20, 20, 0.27);
 }
 
-.filter-element span {
-  margin-right: 5px;
+.filter-label {
+  margin-right: 0.5rem;
+}
+
+.filter-label2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.filter-dropdown {
+  width: 100%;
+}
+
+.filter-button {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.custom-timespan-chooser {
+  display: inline-flex;
 }
 
 .sessions-table {

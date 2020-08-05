@@ -38,7 +38,7 @@ class SessionsTable extends Component {
 
     render() {
         return (
-            <div className="sessions-table">
+            <div className="dashboard-widget sessions-table">
                 <DataTable
                     columns={columns}
                     data={this.props.sessions}
