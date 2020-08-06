@@ -15,12 +15,37 @@ class IpforwardsdataDetails extends Component {
         .catch(console.log)
     }
 
+    getTime = timestamp => {
+        return new Date(timestamp).toLocaleTimeString();
+    }
+
     render() {
         if (this.state.ipforwardsdata.length) {
             return (
                 <div className="App-ipforwardsdatadetails">
                     <p className="details-section-title">IP forwards data:</p>
-                    <p>{JSON.stringify(this.state.ipforwardsdata)}</p>
+                    <table className="details-section-table">
+                        <thead>
+                            <tr>
+                                <th className="table-column-time">Time</th>
+                                <th>Destination IP</th>
+                                <th>Destination port</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                this.state.ipforwardsdata.map((ipforwarddata) =>
+                                    <tr>
+                                        <td className="table-column-time">{this.getTime(ipforwarddata.timestamp)}</td>
+                                        <td>{ipforwarddata.dstIp}</td>
+                                        <td>{ipforwarddata.dstPort}</td>
+                                        <td>{ipforwarddata.data}</td>
+                                    </tr>
+                                )
+                            }
+                        </tbody>
+                    </table>
                 </div>
             )
         } else {

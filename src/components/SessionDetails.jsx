@@ -5,7 +5,6 @@ import IpforwardsDetails from './IpforwardsDetails'
 import IpforwardsdataDetails from './IpforwardsdataDetails'
 import InputDetails from './InputDetails'
 import KeyfingerprintsDetails from './KeyfingerprintsDetails'
-import ParamsDetails from './ParamsDetails'
 import TtylogDetails from './TtylogDetails'
 
 class SessionDetails extends Component {
@@ -14,7 +13,6 @@ class SessionDetails extends Component {
             <div className="session-details">
                 <AuthDetails session={this.props.data.id }/>
                 <KeyfingerprintsDetails session={this.props.data.id} />
-                <ParamsDetails session={this.props.data.id} />
                 <InputDetails session={this.props.data.id} />
                 <IpforwardsDetails session={this.props.data.id} />
                 <IpforwardsdataDetails session={this.props.data.id} />

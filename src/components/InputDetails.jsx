@@ -2,8 +2,12 @@ import React, { Component } from 'react'
 
 class InputDetails extends Component {
 
-    state = {
-        input: []
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            input: []
+        }
     }
 
     componentDidMount() {
@@ -15,12 +19,35 @@ class InputDetails extends Component {
         .catch(console.log)
     }
 
+    getTime = timestamp => {
+        return new Date(timestamp).toLocaleTimeString();
+    }
+
     render() {
         if (this.state.input.length) {
             return (
                 <div className="App-inputdetails">
                     <p className="details-section-title">Input:</p>
-                    <p>{JSON.stringify(this.state.input)}</p>
+                    <table className="details-section-table">
+                        <thead>
+                            <tr>
+                                <th className="table-column-time">Time</th>
+                                <th>Command</th>
+                                <th className="table-column-success">Success</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                this.state.input.map((input) =>
+                                    <tr>
+                                        <td className="table-column-time">{this.getTime(input.timestamp)}</td>
+                                        <td>{input.input}</td>
+                                        <td className="table-column-success">{input.success}</td>
+                                    </tr>
+                                )
+                            }
+                        </tbody>
+                    </table>
                 </div>
             )
         } else {

@@ -22,6 +22,7 @@
   margin: 5px;
   display: flex;
   flex-direction: column;
+  overflow-wrap: anywhere;
 }
 
 .App-footer {
@@ -78,4 +79,28 @@
 
 .details-section-title {
   font-weight: bold;
+}
+
+.details-section-table {
+  background-color: oldlace;
+}
+
+.table-column-time {
+  width: 100px;
+  text-align: center;
+  vertical-align: baseline;
+}
+
+.table-column-username {
+  text-align: center;
+}
+
+.table-column-password {
+  text-align: center;
+}
+
+.table-column-success {
+  width: 60px;
+  text-align: center;
+  vertical-align: baseline;
 }

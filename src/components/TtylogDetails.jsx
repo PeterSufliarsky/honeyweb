@@ -20,7 +20,26 @@ class TtylogDetails extends Component {
             return (
                 <div className="App-ttylogdetails">
                     <p className="details-section-title">TTY log:</p>
-                    <p>{JSON.stringify(this.state.ttylog)}</p>
+                    <table className="details-section-table">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>File name</th>
+                                <th>Size</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                this.state.ttylog.map((ttylog) =>
+                                    <tr>
+                                        <td>{ttylog.id}</td>
+                                        <td>{ttylog.ttylog}</td>
+                                        <td>{ttylog.size}</td>
+                                    </tr>
+                                )
+                            }
+                        </tbody>
+                    </table>
                 </div>
             )
         } else {
