@@ -38,10 +38,14 @@ class DownloadsDetails extends Component {
                                         <tr key={download.id}>
                                             <td className="table-column-time">{this.getTime(download.timestamp)}</td>
                                             <td>
-                                                <a href={download.url}>{download.url}</a>
+                                                {
+                                                    (download.url !== "NULL") && <a href={download.url}>{download.url}</a>
+                                                }
                                             </td>
                                             <td>
-                                                <a href={process.env.REACT_APP_API_HOST + '/downloads/' + download.shasum}>{download.shasum}</a>
+                                                {
+                                                    (download.shasum !== "NULL") && <a href={process.env.REACT_APP_API_HOST + '/downloads/' + download.shasum}>{download.shasum}</a>
+                                                }
                                             </td>
                                         </tr>
                                     )
