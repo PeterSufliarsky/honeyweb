@@ -23,7 +23,6 @@ class TtylogDetails extends Component {
                     <table className="details-section-table">
                         <thead>
                             <tr>
-                                <th>Id</th>
                                 <th>File name</th>
                                 <th>Size</th>
                             </tr>
@@ -31,8 +30,7 @@ class TtylogDetails extends Component {
                         <tbody>
                             {
                                 this.state.ttylog.map((ttylog) =>
-                                    <tr>
-                                        <td>{ttylog.id}</td>
+                                    <tr key={ttylog.id}>
                                         <td>{ttylog.ttylog}</td>
                                         <td>{ttylog.size}</td>
                                     </tr>

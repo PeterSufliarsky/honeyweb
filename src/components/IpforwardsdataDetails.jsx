@@ -36,7 +36,7 @@ class IpforwardsdataDetails extends Component {
                         <tbody>
                             {
                                 this.state.ipforwardsdata.map((ipforwarddata) =>
-                                    <tr>
+                                    <tr key={ipforwarddata.id}>
                                         <td className="table-column-time">{this.getTime(ipforwarddata.timestamp)}</td>
                                         <td>{ipforwarddata.dstIp}</td>
                                         <td>{ipforwarddata.dstPort}</td>

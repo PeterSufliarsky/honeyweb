@@ -40,7 +40,7 @@ class AuthDetails extends Component {
                         <tbody>
                             {
                                 this.state.authTries.map((auth) =>
-                                    <tr>
+                                    <tr key={auth.id}>
                                         <td className="table-column-time">{this.getTime(auth.timestamp)}</td>
                                         <td className="table-column-username">{auth.username}</td>
                                         <td className="table-column-password">{auth.password}</td>

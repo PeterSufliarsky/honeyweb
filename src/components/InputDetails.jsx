@@ -39,7 +39,7 @@ class InputDetails extends Component {
                         <tbody>
                             {
                                 this.state.input.map((input) =>
-                                    <tr>
+                                    <tr key={input.id}>
                                         <td className="table-column-time">{this.getTime(input.timestamp)}</td>
                                         <td>{input.input}</td>
                                         <td className="table-column-success">{input.success}</td>

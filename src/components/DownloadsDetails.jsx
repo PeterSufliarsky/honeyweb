@@ -29,17 +29,17 @@ class DownloadsDetails extends Component {
                                 <tr>
                                     <th className="table-column-time">Time</th>
                                     <th>URL</th>
-                                    <th>SHA256 hash</th>
+                                    <th>File name</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {
                                     this.state.downloads.map((download) =>
-                                        <tr>
+                                        <tr key={download.id}>
                                             <td className="table-column-time">{this.getTime(download.timestamp)}</td>
                                             <td>
-					    	<a href={download.url}>{download.url}</a>
-					    </td>
+                                                <a href={download.url}>{download.url}</a>
+                                            </td>
                                             <td>
                                                 <a href={process.env.REACT_APP_API_HOST + '/downloads/' + download.shasum}>{download.shasum}</a>
                                             </td>
