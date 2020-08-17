@@ -85,6 +85,24 @@
   background-color: oldlace;
 }
 
+.table-column-shortnum {
+  width: 50px;
+  text-align: center;
+  vertical-align: baseline;
+}
+
+.table-column-longnum {
+  width: 100px;
+  text-align: center;
+  vertical-align: baseline;
+}
+
+.table-column-sha256 {
+  width: 600px;
+  text-align: center;
+  vertical-align: baseline;
+}
+
 .table-column-time {
   width: 100px;
   text-align: center;
