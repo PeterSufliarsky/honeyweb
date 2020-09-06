@@ -1,8 +1,16 @@
 import React, { Component } from 'react'
 import DataTable from 'react-data-table-component'
+import Flag from 'react-flags'
 import SessionDetails from './SessionDetails'
 
 const columns = [
+    {
+        name: 'Country',
+        selector: 'country',
+        sortable: true,
+        cell: row => <Flag basePath="img/flags" name={row.country} format="png" pngSize={32} shiny={true} alt={row.country} />,
+        width: '8em'
+    },
     {
         name: 'ID',
         selector: 'id',
