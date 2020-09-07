@@ -26,7 +26,7 @@
 }
 
 .App-footer {
-  height: 25px;
+  height: 40px;
   color: white;
   background-color: #297a99;
   text-align: left;
@@ -121,4 +121,15 @@
   width: 60px;
   text-align: center;
   vertical-align: baseline;
+}
+
+.footer-text {
+  font-size: small;
+  line-height: 40px;
+  margin-right: 0.25em;
+}
+
+.footer-link {
+  color: white;
+  font-size: small;
 }
