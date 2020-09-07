@@ -14,7 +14,7 @@ const columns = [
             <Flag
                 basePath="img/flags"
                 name={row.country}
-                title={getCountryName(row.country)}
+                title={getCountryName(row.country) + ', ' + row.asn}
                 format="png"
                 pngSize={32}
                 shiny={true}
