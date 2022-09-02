@@ -1,5 +1,19 @@
 name: Snyk
-on: push
+
+on:
+  push:
+    branches-ignore:
+      - 'main'
+      - 'dependabot/**'
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ "master" ]
+  schedule:
+    - cron: '21 10 * * 2'
+
+permissions:
+  contents: read
+
 jobs:
   security:
     runs-on: ubuntu-latest
